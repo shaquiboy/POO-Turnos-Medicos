@@ -13,7 +13,7 @@ public class Main {
         MedicoGuardia medico3 = new MedicoGuardia("Rosa","Ramirez",24,false,new ArrayList<>());
 
         // Agregar a la clínica
-        Clinica clinica = new Clinica(new ArrayList<>(), new ArrayList<>(), new ArrayList<>());
+        Clinica clinica = new Clinica();
         clinica.agregarMedico(medico1);
         clinica.agregarMedico(medico2);
         clinica.agregarPaciente(paciente1);

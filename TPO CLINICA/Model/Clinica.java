@@ -8,10 +8,10 @@ public class Clinica {
     private List<Medico> medicos;
     private List<Especialidad> especialidades;
 
-    public Clinica(List<Paciente> pacientes, List<Medico> medicos, List<Especialidad> especialidades) {
-        this.pacientes = pacientes;
-        this.medicos = medicos;
-        this.especialidades = especialidades;
+     public Clinica() {
+        this.pacientes = new ArrayList<>();
+        this.medicos = new ArrayList<>();
+        this.especialidades = new ArrayList<>();
     }
 
     public void agregarPaciente(Paciente p) {

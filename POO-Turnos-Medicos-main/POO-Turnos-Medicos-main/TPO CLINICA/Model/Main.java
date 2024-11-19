@@ -39,7 +39,7 @@ public class Main {
 
         // Verificar que el paciente no tiene turnos
         System.out.println("\nTurnos del paciente antes de la reserva:");
-        for (Turno t : paciente1.tieneTurno()) {
+        for (Turno t : paciente1.listarTurnosPaciente()) {
             System.out.println(t);
         }
 
@@ -62,7 +62,7 @@ public class Main {
 
         // Verificar que el turno ha sido agregado
         System.out.println("\nTurnos del paciente después de la reserva:");
-        for (Turno t : paciente1.tieneTurno()) {
+        for (Turno t : paciente1.listarTurnosPaciente()) {
             System.out.println(t);
         }
 
@@ -74,13 +74,13 @@ public class Main {
 
         // Consultar el turno
         System.out.println("\nConsultando el turno del paciente...");
-        for (Turno t : paciente1.tieneTurno()) {
+        for (Turno t : paciente1.listarTurnosPaciente()) {
             paciente1.consultarTurno(t);  // Mostrar detalles del turno
         }
 
         // Cancelar el turno
         System.out.println("\nCancelando el turno...");
-        List<Turno> turnosPaciente = paciente1.tieneTurno();
+        List<Turno> turnosPaciente = paciente1.listarTurnosPaciente();
         if (!turnosPaciente.isEmpty()) {
             Turno turnoAEliminar = turnosPaciente.get(0); // Obtener el primer turno si la lista no está vacía
             paciente1.cancelarTurno(turnoAEliminar);  // El paciente cancela el turno
@@ -89,7 +89,7 @@ public class Main {
 
         // Verificar que el turno ha sido cancelado del paciente
         System.out.println("\nTurnos del paciente después de cancelar:");
-        for (Turno t : paciente1.tieneTurno()) {
+        for (Turno t : paciente1.listarTurnosPaciente()) {
             System.out.println(t);
         }
 
@@ -111,7 +111,7 @@ public class Main {
         paciente2.reservarTurnoGuardia(medico3);
         // Consultar el turno de guardia
         System.out.println("\nConsultando el turno del paciente...");
-        for (Turno t : paciente2.tieneTurno()) {
+        for (Turno t : paciente2.listarTurnosPaciente()) {
             paciente2.consultarTurno(t);  // Mostrar detalles del turno
         }
 

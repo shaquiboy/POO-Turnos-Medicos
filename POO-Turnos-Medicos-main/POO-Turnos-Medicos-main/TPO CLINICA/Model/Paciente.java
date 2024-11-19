@@ -12,7 +12,7 @@ class Paciente extends Persona implements Gestionable {
 
 
 
-    public List<Turno> tieneTurno() {
+    public List<Turno> listarTurnosPaciente() {
         try {
             // Intentamos obtener los turnos del paciente
             if (turnos.isEmpty()) {
